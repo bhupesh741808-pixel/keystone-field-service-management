@@ -1,6 +1,10 @@
 C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\config\SecurityConfig.java
+C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\config\SpringSecurityAuditorAware.java
+C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\controller\AuthController.java
 C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\controller\UserController.java
+C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\dto\LoginRequest.java
 C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\dto\PageResponse.java
+C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\dto\RegisterRequest.java
 C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\dto\UserRequest.java
 C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\dto\UserResponse.java
 C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\entity\User.java
@@ -12,6 +16,9 @@ C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\s
 C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\globalexceptionhandler\ValidationErrorResponse.java
 C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\mapper\UserMapper.java
 C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\repository\UserRepository.java
+C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\security\JwtAuthenticationFilter.java
+C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\security\JwtService.java
+C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\security\JwtUtil.java
 C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\service\UserService.java
 C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\service\UserServiceImpl.java
 C:\Users\adish\Downloads\keystone-field-service-management\backend\UserService\src\main\java\com\meridian\fieldservice\UserrServiceApplication.java
