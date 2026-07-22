@@ -56,7 +56,7 @@ public class UserServiceImpl implements UserService {
         User existing = userRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + id));
 
-        // Check uniqueness if changed
+        
         if (!existing.getUsername().equals(request.getUsername()) &&
                 userRepository.existsByUsername(request.getUsername())) {
             throw new DuplicateResourceException("Username already taken: " + request.getUsername());
@@ -67,7 +67,7 @@ public class UserServiceImpl implements UserService {
         }
 
         userMapper.updateEntity(existing, request);
-        // Only update password if provided (not blank)
+       
         if (request.getPassword() != null && !request.getPassword().isBlank()) {
             existing.setPassword(passwordEncoder.encode(request.getPassword()));
         }
@@ -120,18 +120,30 @@ public class UserServiceImpl implements UserService {
         return userMapper.toResponse(user);
     }
 
-    // --- UserDetailsService implementation ---
+    
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found: " + username));
 
-        // Build Spring Security UserDetails
+      
         return org.springframework.security.core.userdetails.User
                 .withUsername(user.getUsername())
                 .password(user.getPassword())
-                .roles(user.getRole().name()) // roles will be prefixed with "ROLE_"
+                .roles(user.getRole().name()) 
                 .disabled(!user.getEnabled())
                 .build();
     }
+
+    @Override
+public boolean existsByEmail(String email) {
+    return userRepository.existsByEmail(email);
+}
+
+@Override
+@Transactional
+public User saveUser(User user) {
+    
+    return userRepository.save(user);
+}
 }

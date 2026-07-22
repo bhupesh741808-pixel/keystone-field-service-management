@@ -42,6 +42,8 @@ logging:
   level:
     com.meridian: DEBUG
     org.springframework.web: INFO
+    com.meridian.fieldservice.security: DEBUG
+    org.springframework.security: DEBUG
   file:
     name: logs/application.log
 

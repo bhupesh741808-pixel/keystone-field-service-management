@@ -2,6 +2,7 @@ package com.meridian.fieldservice.service;
 
 import com.meridian.fieldservice.dto.UserRequest;
 import com.meridian.fieldservice.dto.UserResponse;
+import com.meridian.fieldservice.entity.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -20,5 +21,9 @@ public interface UserService extends UserDetailsService {
 
     void deleteUser(Long id);
 
-    UserResponse getCurrentUser(); // get authenticated user info
+    UserResponse getCurrentUser(); 
+
+     boolean existsByEmail(String email);
+    
+    User saveUser(User user);
 }
