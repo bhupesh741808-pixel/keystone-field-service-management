@@ -1,0 +1,33 @@
+server:
+  port: 8084
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/customerdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect        
+        format_sql: true
+        dialect.storage_engine: innodb                    
+    show-sql: false
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+app:
+  jwt:
+    secret: mySecretKeyForJWTGenerationInUserService2026
+    expiration: 86400000
+
+logging:
+  level:
+    com.meridian: DEBUG
+    org.springframework.web: INFO
