@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.keystone.fsm.service.WorkOrderServiceTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.503 s -- in com.keystone.fsm.service.WorkOrderServiceTest

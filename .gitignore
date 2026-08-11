@@ -24,3 +24,6 @@ hs_err_pid*
 replay_pid*
 *.slingshot 
 .github
+./node_modules
+.vscode
+.maven
