@@ -1,0 +1,3 @@
+#!/bin/sh
+# Maven Wrapper Script for Linux/Mac (used by Render)
+exec "$MAVEN_HOME/bin/mvn" "$@" 2>/dev/null || mvn "$@"
