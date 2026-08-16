@@ -104,6 +104,9 @@ keystone:
     refresh-expiration: 604800000
   upload:
     dir: /app/uploads
+  razorpay:
+    key-id: ${RAZORPAY_KEY_ID:rzp_test_SlyBOZGo80GDoa}
+    secret-key: ${RAZORPAY_SECRET_KEY:gMQW0hd0jTtUaWYfnJAZbjqV}
 
 server:
   port: 8080
