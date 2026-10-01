@@ -13,8 +13,12 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class AttachmentDTO {
     private Long id;
-    private Long workOrderId;
     private String fileName;
+    private String contentType;
+    private Long sizeOfFile;
+    private String storagePath;
+    private String cloudinaryId;
     private String filePath;
+    private Long workOrderId;      
     private LocalDateTime uploadedAt;
 }

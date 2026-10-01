@@ -4,6 +4,9 @@ import com.keystone.fsm.dto.*;
 import com.keystone.fsm.entity.*;
 import com.keystone.fsm.mapper.DtoMapper;
 import com.keystone.fsm.repository.*;
+
+import jakarta.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -68,8 +71,8 @@ public class WorkOrderService {
     }
 
     public WorkOrderDTO getWorkOrderById(Long id) {
-        WorkOrder order = workOrderRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Work Order not found with ID: " + id));
+       WorkOrder order = workOrderRepository.findById(id)
+        .orElseThrow(() -> new EntityNotFoundException("WorkOrder not found: " + id));
         return DtoMapper.toWorkOrderDTO(order);
     }
 
@@ -134,9 +137,9 @@ public class WorkOrderService {
     @Transactional
     public WorkOrderDTO assignTechnician(Long id, Long technicianId, String actorEmail) {
         WorkOrder order = workOrderRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Work Order not found"));
+        .orElseThrow(() -> new EntityNotFoundException("WorkOrder not found: " + id));
         User tech = userRepository.findById(technicianId)
-                .orElseThrow(() -> new IllegalArgumentException("Technician not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Technician not found: " + technicianId));
 
         if (tech.getRole() != Role.TECHNICIAN) {
             throw new IllegalArgumentException("Assigned user must be a TECHNICIAN");
@@ -174,7 +177,7 @@ public class WorkOrderService {
     @Transactional
     public WorkOrderDTO updateStatus(Long id, String statusRequest, String actorEmail) {
         WorkOrder order = workOrderRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Work Order not found"));
+                .orElseThrow(() -> new EntityNotFoundException("WorkOrder not found: " + id));
 
         String oldStatus = order.getStatus();
         String newStatus = statusRequest.toUpperCase();
@@ -240,9 +243,9 @@ public class WorkOrderService {
     @Transactional
     public TimeLogDTO logTime(Long workOrderId, TimeLogDTO request, Long technicianId) {
         WorkOrder order = workOrderRepository.findById(workOrderId)
-                .orElseThrow(() -> new IllegalArgumentException("Work Order not found"));
+                .orElseThrow(() -> new EntityNotFoundException("WorkOrder not found: " + workOrderId));
         User tech = userRepository.findById(technicianId)
-                .orElseThrow(() -> new IllegalArgumentException("Technician not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Technician not found: " + technicianId));
 
         TimeLog log = TimeLog.builder()
                 .workOrder(order)
@@ -258,7 +261,7 @@ public class WorkOrderService {
     @Transactional
     public PartUsageDTO logPartUsage(Long workOrderId, PartUsageDTO request) {
         WorkOrder order = workOrderRepository.findById(workOrderId)
-                .orElseThrow(() -> new IllegalArgumentException("Work Order not found"));
+                .orElseThrow(() -> new EntityNotFoundException("WorkOrder not found: " + workOrderId));
         Part part = partRepository.findById(request.getPartId())
                 .orElseThrow(() -> new IllegalArgumentException("Part not found"));
 

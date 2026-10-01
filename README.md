@@ -36,7 +36,7 @@ The H2 Database Console can be accessed at `http://localhost:8080/h2-console` wi
 Navigate to the `frontend/` folder, install dependencies, and start the development server:
 ```bash
 cd frontend
-npm install
+npm install   //OR npm install lucide-react@latest
 npm run dev
 ```
 The client dashboard will launch at `http://localhost:5173`.

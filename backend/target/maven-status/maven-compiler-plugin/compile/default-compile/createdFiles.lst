@@ -1,9 +1,18 @@
+com\keystone\fsm\dto\UploadResult$UploadResultBuilder.class
+com\keystone\fsm\controller\FileAttachmentController.class
 com\keystone\fsm\dto\AuthResponse.class
+com\keystone\fsm\dto\FileAttachmentResponse.class
+com\keystone\fsm\service\CloudinaryStorageService.class
+com\keystone\fsm\service\StorageService.class
 com\keystone\fsm\dto\PartUsageDTO.class
 com\keystone\fsm\entity\User$UserBuilder.class
+com\keystone\fsm\entity\FileAttachment$FileAttachmentBuilder.class
 com\keystone\fsm\repository\TechnicianRepository.class
 com\keystone\fsm\controller\PaymentController.class
+com\keystone\fsm\dto\FileAttachmentResponse$FileAttachmentResponseBuilder.class
+com\keystone\fsm\entity\FileAttachment.class
 com\keystone\fsm\controller\DashboardController.class
+com\keystone\fsm\dto\UploadResult.class
 com\keystone\fsm\repository\CustomerRepository.class
 com\keystone\fsm\dto\DashboardSummaryDTO.class
 com\keystone\fsm\dto\AttachmentDTO.class
@@ -18,6 +27,7 @@ com\keystone\fsm\dto\WorkOrderCreateRequest$WorkOrderCreateRequestBuilder.class
 com\keystone\fsm\security\JwtService.class
 com\keystone\fsm\controller\PartController.class
 com\keystone\fsm\entity\Attachment$AttachmentBuilder.class
+com\keystone\fsm\config\CloudinaryConfig.class
 com\keystone\fsm\dto\PartUsageDTO$PartUsageDTOBuilder.class
 com\keystone\fsm\controller\CustomerController.class
 com\keystone\fsm\dto\DashboardSummaryDTO$DashboardSummaryDTOBuilder.class
@@ -25,6 +35,7 @@ com\keystone\fsm\dto\WorkOrderDTO.class
 com\keystone\fsm\dto\AuthRequest.class
 com\keystone\fsm\config\SecurityConfig.class
 com\keystone\fsm\dto\NotificationDTO$NotificationDTOBuilder.class
+com\keystone\fsm\exception\StorageException.class
 com\keystone\fsm\repository\PartUsageRepository.class
 com\keystone\fsm\repository\UserRepository.class
 com\keystone\fsm\service\SiteService.class
@@ -32,6 +43,7 @@ com\keystone\fsm\dto\TechnicianDTO.class
 com\keystone\fsm\dto\PurchaseDTO$PurchaseDTOBuilder.class
 com\keystone\fsm\repository\NotificationRepository.class
 com\keystone\fsm\repository\ServiceRequestRepository.class
+com\keystone\fsm\repository\FileAttachmentRepository.class
 com\keystone\fsm\dto\CustomerDTO.class
 com\keystone\fsm\controller\ReportController.class
 com\keystone\fsm\dto\StatusHistoryDTO.class
@@ -43,6 +55,7 @@ com\keystone\fsm\dto\TimeLogDTO$TimeLogDTOBuilder.class
 com\keystone\fsm\entity\TimeLog.class
 com\keystone\fsm\controller\UserController.class
 com\keystone\fsm\service\ReportService.class
+com\keystone\fsm\entity\AttachmentType.class
 com\keystone\fsm\entity\Part$PartBuilder.class
 com\keystone\fsm\entity\Notification$NotificationBuilder.class
 com\keystone\fsm\dto\ServiceRequestDTO$ServiceRequestDTOBuilder.class
@@ -53,6 +66,7 @@ com\keystone\fsm\service\NotificationService.class
 com\keystone\fsm\entity\ServiceRequest$ServiceRequestBuilder.class
 com\keystone\fsm\dto\AuthResponse$AuthResponseBuilder.class
 com\keystone\fsm\repository\AttachmentRepository.class
+com\keystone\fsm\service\FileAttachmentServiceImpl.class
 com\keystone\fsm\service\AuthService.class
 com\keystone\fsm\mapper\DtoMapper.class
 com\keystone\fsm\controller\ServiceRequestController.class
@@ -61,6 +75,7 @@ com\keystone\fsm\dto\ServiceRequestDTO.class
 com\keystone\fsm\dto\RegisterRequest.class
 com\keystone\fsm\repository\PartRepository.class
 com\keystone\fsm\security\JwtAuthenticationFilter.class
+com\keystone\fsm\service\CloudinaryStorageService$1.class
 com\keystone\fsm\entity\Purchase.class
 com\keystone\fsm\service\UserService.class
 com\keystone\fsm\entity\StatusHistory$StatusHistoryBuilder.class
@@ -71,8 +86,10 @@ com\keystone\fsm\dto\StatusHistoryDTO$StatusHistoryDTOBuilder.class
 com\keystone\fsm\entity\WorkOrder$WorkOrderBuilder.class
 com\keystone\fsm\exception\GlobalExceptionHandler.class
 com\keystone\fsm\entity\PartUsage$PartUsageBuilder.class
+com\keystone\fsm\service\CloudinaryService.class
 com\keystone\fsm\entity\PartUsage.class
 com\keystone\fsm\entity\TimeLog$TimeLogBuilder.class
+com\keystone\fsm\service\FileAttachmentService.class
 com\keystone\fsm\entity\Notification.class
 com\keystone\fsm\controller\NotificationController.class
 com\keystone\fsm\entity\ServiceRequest.class
@@ -99,6 +116,7 @@ com\keystone\fsm\dto\SiteDTO$SiteDTOBuilder.class
 com\keystone\fsm\entity\User.class
 com\keystone\fsm\KeystoneFsmApplication.class
 com\keystone\fsm\entity\Customer.class
+com\keystone\fsm\entity\StorageProvider.class
 com\keystone\fsm\service\WorkOrderService.class
 com\keystone\fsm\service\DashboardService.class
 com\keystone\fsm\entity\Customer$CustomerBuilder.class
